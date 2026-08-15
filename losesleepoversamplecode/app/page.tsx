@@ -8,7 +8,7 @@ export default function Home() {
          href="/Landing">
           <button>About</button>
         </Link>
-        ㅎㅇ
+        ㅎㅇ깃연결중
       </div>
       
 
