@@ -1,4 +1,3 @@
-import MainHeader from "./component/MainHeader";
 import TopHeader from "./component/TopHeader";
 import "./globals.css";
 
@@ -9,10 +8,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
+      <body className="m-0 bg-[#f5f5f5] text-black">
         <TopHeader />
-        <MainHeader />
-        
-      <body>{children}</body>
+        {children}
+      </body>
     </html>
   );
 }
