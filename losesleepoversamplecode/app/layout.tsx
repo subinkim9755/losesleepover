@@ -1,3 +1,5 @@
+import MainHeader from "./component/MainHeader";
+import TopHeader from "./component/TopHeader";
 import "./globals.css";
 
 export default function RootLayout({
@@ -7,6 +9,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
+        <TopHeader />
+        <MainHeader />
+        
       <body>{children}</body>
     </html>
   );
