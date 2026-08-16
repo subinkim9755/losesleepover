@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 26s linear infinite;
+}
