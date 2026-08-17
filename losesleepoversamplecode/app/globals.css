@@ -1,14 +1,32 @@
 @import "tailwindcss";
 
+:root {
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1024px;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background: #f5f5f5;
+  background: #F8F9FA   ;
+  cursor: url('/curser.png') 10 10, auto;
 }
 
 * {
   box-sizing: border-box;
+}
+
+button,
+a {
+  outline: none;
+}
+
+button:focus,
+button:focus-visible,
+a:focus,
+a:focus-visible {
+  outline: none;
 }
 
 @keyframes marquee {
