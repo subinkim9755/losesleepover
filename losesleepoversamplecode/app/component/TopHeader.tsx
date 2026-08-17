@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../public/Logo.png";
+import LogoWhite from "../../public/Logo_white.png";
 import menu_white from "../../public/menu_white.png";
 
 
 function TopHeader() {
   const text = "26HS SEASON OPEN";
   const repeatedText = Array.from({ length: 12 }, (_, index) => (
-    <span key={index} className="inline-block px-30 text-[9px] font-bold tracking-[0.7em] text-white">
+    <span key={index} className="inline-block px-30 text-[9px] font-bold tracking-[0.3em] text-white">
       {text}
     </span>
   ));
@@ -22,25 +22,33 @@ function TopHeader() {
       </div>
 
       <header className="fixed inset-x-0 top-[30px] z-30">
-        {/* 투명도 bg-black/15 */}
-        <div className="flex h-[58px] w-full items-center justify-between border-b border-white/20 bg-black/15 px-8 backdrop-blur-sm" >
-          <div className="flex h-20 w-20 items-center justify-start">
-          <button type="button" className="flex justify-left h-20 w-20 cursor-pointer items-center justify-start">
-            <Image src={menu_white} alt="Logo" width={30} height={30} />
-          </button>
+        {/* 투명도 bg-black/15 backdrop-blur-sm*/}
+
+
+        <div className="grid h-[58px] w-full grid-cols-[1fr_auto_1fr] items-center px-5">
+          <div className="justify-self-start">
+            <div className="hidden min-[769px]:flex items-center justify-end gap-5 justify-self-end text-white">
+              <button className="cursor-pointer text-sm hover:text-white/70">SHOP</button>
+              <button className="cursor-pointer text-sm hover:text-white/70">BARND</button>
+              <button className="cursor-pointer text-sm hover:text-white/70">COLLECTION</button>
+            </div>
+
+            <button type="button" className="flex h-14 w-14 cursor-pointer items-center justify-start min-[769px]:hidden">
+              <Image src={menu_white} alt="Logo" width={20} height={20} />
+            </button>
           </div>
 
-          <button type="button" className="flex h-20 w-60 cursor-pointer items-center justify-center">
+          <button type="button" className="flex cursor-pointer items-center justify-center">
             <Link href="/">
-              <Image src={Logo} alt="Logo" width={150} height={60} />
+              <Image src={LogoWhite} alt="Logo" width={130} height={50} />
             </Link>
           </button>
 
-          <div className="flex h-20 w-60 items-center justify-end gap-5 text-white">
-            <button className="cursor-pointer text-lg hover:text-white/70">LOGIN</button>
-            <button className="cursor-pointer text-lg hover:text-white/70">JOIN</button>
-            <button className="cursor-pointer text-lg hover:text-white/70">CARFT(0)</button>
-            <button className="cursor-pointer text-lg hover:text-white/70">SEARCH</button>
+          <div className="flex items-center justify-end gap-5 justify-self-end text-white">
+            <button className="cursor-pointer text-sm hover:text-white/70">LOGIN</button>
+            <button className="cursor-pointer text-sm hover:text-white/70">JOIN</button>
+            <button className="cursor-pointer text-sm hover:text-white/70">CARFT(0)</button>
+            <button className="cursor-pointer text-sm hover:text-white/70">SEARCH</button>
           </div>
         </div>
       </header>
