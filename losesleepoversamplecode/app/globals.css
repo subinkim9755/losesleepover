@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "LogoFont";
+  src: url("/LogoFont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --breakpoint-sm: 768px;
   --breakpoint-md: 1024px;
@@ -41,3 +49,27 @@ a:focus-visible {
 .marquee-track {
   animation: marquee 26s linear infinite;
 }
+
+.pont-LogoFont {
+  font-family: "LogoFont", sans-serif;
+}
+
+@keyframes loading-title-reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.loading-title {
+  animation: loading-title-reveal 1s ease-out both;
+}
+
+.galaxy-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
